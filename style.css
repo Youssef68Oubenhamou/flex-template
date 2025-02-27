@@ -8,21 +8,27 @@ body{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        height: 8vh;
+        height: 6vh;
+        font-family: "Open Sans", serif;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
 
         ul {
-            
+
             margin: 0;
             padding-left:0;
-
+            width: 20%;
             display: flex;
             gap:.8rem;
+            justify-content: space-around;
             li {
                 list-style: none;
 
                 a {
 
                     text-decoration: none;
+                    color: rgb(64, 64, 247);
 
                 }
 
@@ -32,7 +38,7 @@ body{
 
     main {
 
-        height: 100vh;
+        height: 100%;
         background-color: rgb(185, 178, 178);
         display: flex;
 
@@ -47,17 +53,83 @@ body{
 
             width: 70%;
             display: flex;
-            gap: .5rem;
+            justify-content: center;
+            grid-column-gap: 3rem;
+            grid-row-gap: 2rem;
             /* flex-direction: row; */
             flex-wrap: wrap;
-            padding: 10px;
-            /* padding-bottom: 10px; */
+            padding: 30px;
 
             article {
 
-                border: 1px solid gray;
                 width: 250px;
-                height: 300px;
+                height: 350px;
+                box-shadow: 0px 0px 8px 1px black;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                background-color: rgb(211, 198, 182);
+                transition: 1s transform , 1s background-color;
+
+                img {
+
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 35%;
+
+                }
+
+                p {
+
+                    padding-left: 10px;
+
+                }
+
+                button {
+
+                    width: 100px;
+                    border: none;
+                    background-color: rgb(0, 199, 0);
+                    color: white;
+                    padding: 8px;
+                    border-radius: 5px;
+                    margin-bottom: 20px;
+                    font-size: 16px;
+
+                }
+
+            }
+
+            article:hover {
+
+                transform: scale(1.15);
+                cursor: pointer;
+                /* opacity: .5; */
+                background-color: black;
+
+            }
+
+            article:hover img {
+
+                opacity: 0;
+                background-color: black;
+
+            }
+
+            article:hover p {
+
+                color: white;
+                z-index: 9999;
+
+            }
+
+            article:hover button {
+
+                opacity: .5;
+                background-color: black;
+                color: rgba(255, 255, 255, 0.205);
 
             }
 
